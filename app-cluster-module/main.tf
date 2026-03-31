@@ -17,6 +17,9 @@ module "aks" {
   kubernetes_version  = var.kubernetes_version
   vnet_subnet_id      = var.subnet_id
 
+  net_profile_service_cidr   = "172.16.0.0/16"
+  net_profile_dns_service_ip = "172.16.0.10"
+
   agents_count        = var.node_count
   agents_size         = "Standard_D2s_v3"
   agents_min_count    = 1
