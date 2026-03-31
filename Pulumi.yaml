@@ -1,0 +1,36 @@
+name: yte-assurant-demo
+description: Claims processing staging environment on Azure using Terraform module wrappers
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python
+packages:
+  demo_network:
+    source: terraform-module
+    version: 0.2.0
+    parameters:
+      - github.com/pulumi-demos/yte-assurant-demo//demo-network-module
+      - demo_network
+  app_cluster:
+    source: terraform-module
+    version: 0.2.0
+    parameters:
+      - github.com/pulumi-demos/yte-assurant-demo//app-cluster-module
+      - app_cluster
+  app_database:
+    source: terraform-module
+    version: 0.2.0
+    parameters:
+      - github.com/pulumi-demos/yte-assurant-demo//app-database-module
+      - app_database
+  app_storage:
+    source: terraform-module
+    version: 0.2.0
+    parameters:
+      - github.com/pulumi-demos/yte-assurant-demo//app-storage-module?ref=main
+      - app_storage
