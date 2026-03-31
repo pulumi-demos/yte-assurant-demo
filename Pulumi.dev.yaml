@@ -1,0 +1,2 @@
+environment:
+  - azure-data/azure-base
