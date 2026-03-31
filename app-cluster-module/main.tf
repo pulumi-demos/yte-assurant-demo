@@ -24,12 +24,13 @@ module "aks" {
   enable_auto_scaling = true
 
   # Security defaults — not exposed to app devs
-  private_cluster_enabled = true
-  rbac_aad                = true
-  rbac_aad_managed        = true
-  network_plugin          = "azure"
-  network_policy          = "azure"
-  os_disk_size_gb         = 50
+  private_cluster_enabled           = true
+  role_based_access_control_enabled = true
+  rbac_aad                          = true
+  rbac_aad_managed                  = true
+  network_plugin                    = "azure"
+  network_policy                    = "azure"
+  os_disk_size_gb                   = 50
 
   tags = {
     app_name    = var.app_name
