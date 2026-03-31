@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
+    }
+  }
+}
+
 # Single resource group for everything in this environment
 resource "azurerm_resource_group" "this" {
   name     = "rg-${var.app_name}-${var.environment}"
