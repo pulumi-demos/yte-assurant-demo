@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.0"
-    }
-  }
-}
-
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_storage_account" "this" {
   # Storage account names must be lowercase, 3-24 chars, no hyphens
   name                     = substr(replace("${var.app_name}${var.environment}docs", "-", ""), 0, 24)
