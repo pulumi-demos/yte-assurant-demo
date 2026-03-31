@@ -37,8 +37,11 @@ resource "azurerm_postgresql_flexible_server" "this" {
   backup_retention_days         = var.environment == "prod" ? 30 : 7
   geo_redundant_backup_enabled  = var.environment == "prod" ? true : false
 
-  high_availability {
-    mode = var.environment == "prod" ? "ZoneRedundant" : "Disabled"
+  dynamic "high_availability" {
+    for_each = var.environment == "prod" ? [1] : []
+    content {
+      mode = "ZoneRedundant"
+    }
   }
 
   tags = {
