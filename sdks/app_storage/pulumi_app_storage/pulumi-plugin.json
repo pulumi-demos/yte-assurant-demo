@@ -1,0 +1,10 @@
+{
+  "resource": true,
+  "name": "terraform-module",
+  "version": "0.2.0",
+  "parameterization": {
+    "name": "app_storage",
+    "version": "0.0.1",
+    "value": "ewogICJtb2R1bGUiOiAiZ2l0aHViLmNvbS9wdWx1bWktZGVtb3MveXRlLWFzc3VyYW50LWRlbW8vL2FwcC1zdG9yYWdlLW1vZHVsZT9yZWY9bWFpbiIsCiAgInBhY2thZ2VOYW1lIjogImFwcF9zdG9yYWdlIgp9"
+  }
+}
