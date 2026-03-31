@@ -1,0 +1,10 @@
+{
+  "resource": true,
+  "name": "terraform-module",
+  "version": "0.2.0",
+  "parameterization": {
+    "name": "app_database",
+    "version": "0.0.1",
+    "value": "ewogICJtb2R1bGUiOiAiZ2l0aHViLmNvbS9wdWx1bWktZGVtb3MveXRlLWFzc3VyYW50LWRlbW8vL2FwcC1kYXRhYmFzZS1tb2R1bGUiLAogICJwYWNrYWdlTmFtZSI6ICJhcHBfZGF0YWJhc2UiCn0="
+  }
+}
