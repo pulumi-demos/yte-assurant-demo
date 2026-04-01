@@ -26,5 +26,5 @@ variable "node_count" {
 }
 variable "kubernetes_version" {
   type    = string
-  default = "1.28"
+  default = "1.34"
 }
