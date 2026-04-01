@@ -37,10 +37,6 @@ resource "azurerm_kubernetes_cluster" "this" {
     dns_service_ip = "172.16.0.10"
   }
 
-  azure_active_directory_role_based_access_control {
-    managed = true
-  }
-
   tags = {
     app_name    = var.app_name
     environment = var.environment
